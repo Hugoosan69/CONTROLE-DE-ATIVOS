@@ -98,7 +98,7 @@ namespace WinFormsApp1
 
         private void fabricanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Form FrmGerFab = new FrmGerFab();
             FrmGerFab.ShowDialog();
         }

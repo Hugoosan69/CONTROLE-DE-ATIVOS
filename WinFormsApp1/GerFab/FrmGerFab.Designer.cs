@@ -56,7 +56,7 @@
             button1.FlatAppearance.MouseOverBackColor = Color.Red;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources.closeNormal_Image;
-            button1.Location = new Point(434, 12);
+            button1.Location = new Point(470, 12);
             button1.Name = "button1";
             button1.Size = new Size(30, 30);
             button1.TabIndex = 0;
@@ -69,12 +69,12 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = Properties.Resources.minimizeNormal_Image;
-            button2.Location = new Point(398, 12);
+            button2.Location = new Point(434, 12);
             button2.Name = "button2";
             button2.Size = new Size(30, 30);
             button2.TabIndex = 1;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += button2_Click;
+            //button2.Click += button2_Click;
             // 
             // label1
             // 
@@ -117,7 +117,7 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Location = new Point(12, 84);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(452, 338);
+            groupBox1.Size = new Size(488, 338);
             groupBox1.TabIndex = 4;
             groupBox1.TabStop = false;
             // 
@@ -128,7 +128,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button5.Image = Properties.Resources.remover_usuario;
-            button5.Location = new Point(355, 278);
+            button5.Location = new Point(386, 278);
             button5.Name = "button5";
             button5.Size = new Size(88, 46);
             button5.TabIndex = 13;
@@ -144,7 +144,7 @@
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button4.ForeColor = SystemColors.ControlText;
             button4.Image = Properties.Resources.lapis;
-            button4.Location = new Point(355, 197);
+            button4.Location = new Point(386, 197);
             button4.Name = "button4";
             button4.Size = new Size(88, 46);
             button4.TabIndex = 12;
@@ -159,7 +159,7 @@
             BtnFabCad.FlatStyle = FlatStyle.Flat;
             BtnFabCad.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             BtnFabCad.Image = Properties.Resources.adicionar_usuario;
-            BtnFabCad.Location = new Point(355, 116);
+            BtnFabCad.Location = new Point(386, 116);
             BtnFabCad.Name = "BtnFabCad";
             BtnFabCad.Size = new Size(88, 46);
             BtnFabCad.TabIndex = 11;
@@ -177,16 +177,16 @@
             GridFab.Name = "GridFab";
             GridFab.ReadOnly = true;
             GridFab.RowHeadersVisible = false;
-            GridFab.Size = new Size(323, 208);
+            GridFab.Size = new Size(348, 208);
             GridFab.TabIndex = 10;
             // 
             // PesquisaFab
             // 
             PesquisaFab.FlatAppearance.BorderColor = Color.Silver;
             PesquisaFab.FlatStyle = FlatStyle.Flat;
-            PesquisaFab.Location = new Point(365, 37);
+            PesquisaFab.Location = new Point(386, 34);
             PesquisaFab.Name = "PesquisaFab";
-            PesquisaFab.Size = new Size(74, 25);
+            PesquisaFab.Size = new Size(88, 25);
             PesquisaFab.TabIndex = 9;
             PesquisaFab.Text = "Pesquisar";
             PesquisaFab.UseVisualStyleBackColor = true;
@@ -202,6 +202,7 @@
             // 
             // CmbSituacao
             // 
+            CmbSituacao.DisplayMember = "Ativo";
             CmbSituacao.FlatStyle = FlatStyle.System;
             CmbSituacao.FormattingEnabled = true;
             CmbSituacao.Items.AddRange(new object[] { "Ativo", "Inativo" });
@@ -209,6 +210,8 @@
             CmbSituacao.Name = "CmbSituacao";
             CmbSituacao.Size = new Size(121, 23);
             CmbSituacao.TabIndex = 7;
+            CmbSituacao.Text = "Ativo";
+            CmbSituacao.ValueMember = "Ativo";
             // 
             // DTinicioCad
             // 
@@ -263,7 +266,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.telaAzul;
-            ClientSize = new Size(481, 450);
+            ClientSize = new Size(512, 450);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -273,6 +276,9 @@
             Name = "FrmGerFab";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmGerFab";
+            MouseDown += FrmGerFab_MouseDown;
+            MouseMove += FrmGerFab_MouseMove;
+            MouseUp += FrmGerFab_MouseUp;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)GridFab).EndInit();
